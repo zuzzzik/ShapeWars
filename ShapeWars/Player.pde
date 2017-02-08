@@ -1,12 +1,13 @@
 class Player extends GameObject
 {
   boolean fire;
+  int score = 0;
 
   Player()
   {
     position = new PVector(250, 600);
     size = 20;
-    energy = 1;
+    energy = 3;
     c = color(255, 204, 0);
     fire = true;
   }
@@ -40,7 +41,6 @@ class Player extends GameObject
         {
           fire();
           fire = false;
-          
         }
       }
     }

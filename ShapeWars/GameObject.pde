@@ -4,13 +4,12 @@ abstract class GameObject
   PVector position;
   float size;
   color c;
-  float energy;
-  
+  int energy;
+
   GameObject()
   {
-    
   }
-  
+
   abstract void update();  
   abstract void render();
 }

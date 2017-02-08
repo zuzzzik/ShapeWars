@@ -14,7 +14,36 @@ void setup()
 
 void draw()
 {
+  background(color(169, 169, 169));
 
+  if (player1.energy != 0)
+  {
+    gameStart();
+  } 
+  else
+  {
+    gameOver();
+  }
+}
+
+void stats()
+{
+  fill(0);
+  textSize(32);
+  text("Score: " + player1.score, 10, 30);
+  text("Energy: " + player1.energy, 10, 60);
+}
+
+void gameOver()
+{
+
+  fill(0);
+  textSize(32);
+  text("Player Score: " + player1.score, 10, 30);
+}
+
+void gameStart()
+{
   stats();
 
   if (count == 150)
@@ -30,8 +59,6 @@ void draw()
   }
   count++;
 
-  background(0);
-
   for (int i = gameObjects.size() -1; i >= 0; i --)
   {
     GameObject object = gameObjects.get(i); 
@@ -40,9 +67,7 @@ void draw()
   }
 }
 
-void stats()
+void mainMenu()
 {
-  fill(0);
-  textSize(32);
-  text("word", 10, 30);
+  
 }
