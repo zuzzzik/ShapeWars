@@ -1,4 +1,3 @@
-
 int count;
 ArrayList<GameObject> gameObjects = new ArrayList<GameObject>();
 
@@ -36,10 +35,10 @@ void stats()
 
 void gameOver()
 {
-
   fill(0);
   textSize(32);
-  text("Player Score: " + player1.score, 10, 30);
+  text("Game Over", width/2, height/2);
+  text("Your Score: " + player1.score, width/2, height/2 + 30);
 }
 
 void gameStart()
